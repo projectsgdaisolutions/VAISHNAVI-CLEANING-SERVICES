@@ -1,34 +1,26 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting...</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
 
-    <script>
-      (function () {
-        var base = '/VAISHNAVI-CLEANING-SERVICES';
-        var path = window.location.pathname;
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var route = path.replace(/^\/+/, '');
 
-        var route = path.indexOf(base) === 0
-          ? path.slice(base.length)
-          : path;
+      var query = window.location.search
+        ? '&' + window.location.search.slice(1)
+        : '';
 
-        var query = window.location.search
-          ? '&' + window.location.search.slice(1)
-          : '';
+      var hash = window.location.hash || '';
 
-        var hash = window.location.hash || '';
-
-        window.location.replace(
-          base + '/?/' + route.replace(/^\//, '') + query + hash
-        );
-      })();
-    </script>
-  </head>
-
-  <body>
-    <p>Redirecting to Vaishnavi Cleaning Services...</p>
-  </body>
+      window.location.replace('/?/' + route + query + hash);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
 </html>
