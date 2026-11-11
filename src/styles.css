@@ -87,3 +87,48 @@
  .whatsapp-float-third{bottom:130px}
  .topbar-contacts{gap:6px}
 }
+
+/* GD AI Solutions footer link follows the existing footer typography. */
+.footer-bottom a{color:inherit;text-decoration:none;font-weight:700}.footer-bottom a:hover{color:var(--lime)}
+
+/* WhatsApp contact button styled to match the supplied reference: single green circular action. */
+.whatsapp-float{
+  width:76px;height:76px;padding:0;right:26px;bottom:26px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;background:#16bf7a;color:#fff;
+  box-shadow:0 10px 30px #061b4340,0 0 0 1px #ffffff20;
+}
+.whatsapp-float:hover{transform:translateY(-3px) scale(1.03)}
+.whatsapp-float span{display:none}
+.whatsapp-brand-icon{width:39px;height:39px;display:block;color:#fff}
+.footer-bottom a{font-weight:800;text-decoration:none}
+.footer-bottom a:hover{text-decoration:underline}
+@media(max-width:700px){
+  .whatsapp-float{width:64px;height:64px;right:16px;bottom:16px}
+  .whatsapp-brand-icon{width:34px;height:34px}
+}
+
+/* Requested WhatsApp header treatment and GD AI Solutions footer credit.
+   Existing page layout, colours, typography and image assets are preserved. */
+.topbar-contacts{display:flex;align-items:center;gap:22px;flex-wrap:nowrap}
+.topbar-contacts .topbar-phone{display:inline-flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:800;white-space:nowrap}
+.topbar-contacts .topbar-phone svg{color:#22c5e8;width:18px;height:18px}
+.topbar-contacts .topbar-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:12px 22px;border-radius:999px;background:#12ad68;color:#fff;font-size:15px;font-weight:800;white-space:nowrap;box-shadow:0 8px 22px #12ad6840;transition:transform .2s,background .2s}
+.topbar-contacts .topbar-whatsapp svg{color:#fff}
+.topbar-contacts .topbar-whatsapp:hover{background:#07985a;transform:translateY(-2px)}
+.footer-bottom{justify-content:center;text-align:center;min-height:55px}
+.footer-bottom>span:first-child{display:none}
+.footer-bottom .footer-made-for{display:none}
+.footer-credit-wrap{display:flex;justify-content:center;padding:22px 16px 26px;border-top:1px solid #ffffff12;background:#031129}
+.footer-credit{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border:1px solid #ffffff20;border-radius:999px;background:#ffffff09;color:#a9bfdc;font-size:15px;transition:border-color .2s,transform .2s,background .2s}
+.footer-credit:hover{border-color:#28b9ef80;background:#ffffff10;transform:translateY(-2px)}
+.footer-credit strong{color:#20c5e6;font-weight:800}
+.footer-credit-dot{width:9px;height:9px;border-radius:50%;background:#36c4e4;box-shadow:0 0 0 5px #36c4e422}
+@media(max-width:700px){
+ .topbar-inner{height:auto;min-height:48px;padding-top:6px;padding-bottom:6px}
+ .topbar-contacts{width:100%;justify-content:space-between;gap:10px}
+ .topbar-contacts .topbar-phone{font-size:12px}
+ .topbar-contacts .topbar-whatsapp{padding:10px 15px;font-size:12px}
+ .topbar-contacts .topbar-whatsapp svg{width:17px;height:17px}
+ .footer-credit{font-size:13px;padding:11px 18px}
+}

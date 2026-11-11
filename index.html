@@ -4,20 +4,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#061b43" />
+    <meta name="theme-color" content="#082653" />
     <meta
       name="description"
-      content="Vaishnavi Glass Cleaning Service — windows, bathroom, washing machine and car cleaning. Clean spaces, healthy life."
+      content="Vaishnavi Glass Cleaning Service — professional cleaning for windows, bathrooms, washing machines and cars."
     />
-    <meta name="robots" content="index, follow" />
 
-    <title>Vaishnavi Glass Cleaning Service | Clean Spaces, Healthy Life</title>
+    <title>Vaishnavi Glass Cleaning Service</title>
+
+    <!-- Restore the original route after GitHub Pages redirects -->
+    <script>
+      (function (location) {
+        if (location.search.length > 1 && location.search.charAt(1) === '/') {
+          var decoded = location.search
+            .slice(1)
+            .split('&')
+            .map(function (part) {
+              return part.replace(/~and~/g, '&');
+            });
+
+          var path = decoded[0].split('?')[0];
+          var query = decoded[1] ? '?' + decoded[1] : '';
+
+          window.history.replaceState(
+            null,
+            null,
+            location.pathname.replace(/\/$/, '') + path + query + location.hash
+          );
+        }
+      })(window.location);
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
 
-    <!-- Vite React Entry Point -->
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
